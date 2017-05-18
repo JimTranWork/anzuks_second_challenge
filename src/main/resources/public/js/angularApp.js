@@ -10,6 +10,7 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                             $scope.associatedJobPosts = [];
                                             $scope.successfulCandidate = [];
                                             $scope.errors = [];
+                                            $scope.details = [];
                                             $scope.comments = [];
 
                                             $scope.getSuggestedCandidates = function() {
@@ -35,12 +36,20 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                                 $scope.grades = response.data.ReturnObject.Grades;
                                                 $scope.associatedJobPosts = response.data.ReturnObject.AssociatedJobPosts;
                                                 $scope.successfulCandidate = response.data.ReturnObject.SuccessfulCandidate;
+                                                $scope.details = response.data.ReturnObject;
                                                 console.log('getPermRoles call is completed');
+                                                console.log('floatedCandidates');
                                                 console.log($scope.floatedCandidates);
+                                                console.log('notSuitableCandidates');
                                                 console.log($scope.notSuitableCandidates);
+                                                console.log('grades');
                                                 console.log($scope.grades);
+                                                console.log('associatedJobPosts');
                                                 console.log($scope.associatedJobPosts);
+                                                console.log('successfulCandidate');
                                                 console.log($scope.successfulCandidate);
+                                                console.log('details');
+                                                console.log($scope.details);
                                               }, function errorCallback(response) {
                                                 console.log(response);
                                               });
@@ -68,5 +77,22 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
 
 	$scope.init();
 	/* pulling resources from api endpoints */
+
+  /* Utility functions here, should be separated into a different controller but meh */
+  $scope.collapseSuitableCandidateEvent = function() {
+    if ($scope.collapseSuitableCandidate) {
+      $scope.collapseSuitableCandidate = false;
+    } else {
+      $scope.collapseSuitableCandidate = true;
+    }
+  }
+
+  $scope.collapseNotSuitableCandidateEvent = function() {
+    if ($scope.collapseNotSuitableCandidate) {
+      $scope.collapseNotSuitableCandidate = false;
+    } else {
+      $scope.collapseNotSuitableCandidate = true;
+    }
+  }
 
 } ]);

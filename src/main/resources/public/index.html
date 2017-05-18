@@ -34,14 +34,14 @@
   <!-- Start of style reference -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <!-- End of style reference -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <!-- Start of custom style -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
-
+  <link rel="stylesheet" href="css/app.css">
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <!-- End of custom style -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
@@ -58,7 +58,7 @@
           <p class="sub-job-title">Salary Range: 70000 - 80000</p>
         </div>
       </div>
-      <div class="w-col w-col-9"><a class="job-campus-location w-button" href="#">Sandringham College - Beaumaris Campus</a>
+      <div class="w-col w-col-9"><a style="text-decoration: none;" class="job-campus-location w-button" href="#">Sandringham College - Beaumaris Campus</a>
       </div>
     </div>
   </div>
@@ -75,12 +75,56 @@
           </div>
         </div>
         <div class="details-container-div">
-          <div>
+          <div class="details-title-div">
             <div>Details</div>
           </div>
-          <div class="w-row">
-            <div class="w-col w-col-6"></div>
-            <div class="w-col w-col-6"></div>
+          <div class="w-row" id="margin-table">
+            <table>
+							<tr>
+								<td class="left-column"> Main Contact </td>
+									<td class="right-column"> {{details.MainContactAsText.split(' ')[0]}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Category </td>
+								<td class="right-column"> {{details.CategoryAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Sub Category </td>
+								<td class="right-column"> {{details.SubCategoryAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Work Type </td>
+								<td class="right-column"> {{details.WorkTypeAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Lead Generator </td>
+								<td class="right-column"> {{details.LeadAdminUserAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Recruiter </td>
+								<td class="right-column"> {{details.RecruiterAdminUserAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Job Source </td>
+								<td class="right-column"> {{details.JobSourceAsText}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Priority </td>
+								<td class="right-column"> {{details.Priority}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Rating </td>
+								<td class="right-column"> {{details.Rating}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Reference No </td>
+								<td class="right-column"> {{details.Reference}} </td>
+							</tr>
+							<tr>
+								<td class="left-column"> Confirmed Salary </td>
+								<td class="right-column"> {{details.SalaryConfirmed}} </td>
+							</tr>
+						</table>
           </div>
         </div>
         <div class="associate-job-post-container-div">
@@ -104,45 +148,53 @@
       </div>
       <div class="w-col w-col-3">
         <div class="suitable-candidate-container-div">
-          <div class="suitable-candidate-div w-clearfix"><a class="suitable-candidate-collapse-button w-button" href="#">-</a>
+          <div class="suitable-candidate-div w-clearfix"><a style="text-decoration: none;" class="suitable-candidate-collapse-button w-button" ng-model="collapseSuitableCandidate" ng-init="collapseSuitableCandidate=true" ng-click="collapseSuitableCandidateEvent()" href="#">-</a>
             <div class="suitable-candidate-text">Suggested Candidates (4)</div>
           </div>
-          <div>
+          <div ng-show="collapseSuitableCandidate">
             <div>
               <div class="w-row" ng-repeat="suggestedCandidate in suggestedCandidates">
                 <div class="w-col w-col-3"><img src="/img/successful_candidate_avatar.jpg">
                 </div>
                 <div class="w-col w-col-9">
-                  <div>{{suggestedCandidate.FirstName}} {{suggestedCandidate.LastName}}</div>
-                  <div>{{suggestedCandidate.distance}}/KM From Placement</div>
-                  <div>Never Been</div>
+                  <div> <span class="suggested-candidate-name"> {{suggestedCandidate.FirstName}} {{suggestedCandidate.LastName}} </span> <i id="font-awesome-car-icon" class="fa fa-car" aria-hidden="true"></i></div>
+                  <div><span class="suggested-candidate-distance">{{suggestedCandidate.distance}}/KM From Placement </span></div>
+                  <div><span class="suggested-candidate-been">Never Been</span></div>
                 </div>
-								<div>
-<i class="fa fa-camera-retro fa-lg"></i>
-								</div>
+                <div>
+                  <i id="font-awesome-icon-float-right" class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                  <i id="font-awesome-icon-float-right" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                  <i id="font-awesome-icon-float-right" class="fa fa-eye" aria-hidden="true"> </i>
+                </div>
               </div>
             </div>
-            <div class="w-clearfix"><a class="suitable-candidate-refresh-button w-button" href="#">Button Text</a>
+            <div class="w-clearfix"><i id="font-awesome-refresh-icon" class="fa fa-refresh" aria-hidden="true"></i>
+              <i id="not-suitable-candidate-icon-float-right" class="fa fa-angle-double-right" aria-hidden="true"></i>
+              <button class="not-suitable-candidate-pagination-button"> 1 </button>
+              <i id="not-suitable-candidate-icon-float-right" class="fa fa-angle-double-left" aria-hidden="true"></i>
             </div>
           </div>
         </div>
         <div class="not-suitable-candidate-container-div">
-          <div class="not-suitable-candidate-div w-clearfix"><a class="not-suitable-candidate-collapsible-button w-button" href="#">-</a>
+          <div class="not-suitable-candidate-div w-clearfix"><a style="text-decoration: none;" class="not-suitable-candidate-collapsible-button w-button" ng-model="collapseNotSuitableCandidate" ng-init="collapseNotSuitableCandidate=true" ng-click="collapseNotSuitableCandidateEvent()" href="#">-</a>
             <div class="not-suitable-candidate-text">Not Suitable (1)</div>
           </div>
-          <div>
+          <div ng-show="collapseNotSuitableCandidate">
             <div>
-              <div class="w-row">
-                <div class="w-col w-col-3"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg">
+              <div class="w-row" ng-repeat="notSuitableCandidate in notSuitableCandidates">
+                <div class="w-col w-col-3"><img src="http://i.dailymail.co.uk/i/pix/2015/03/30/04/271843AB00000578-0-image-a-86_1427687469357.jpg">
                 </div>
                 <div class="w-col w-col-9">
-                  <div></div>
-                  <div></div>
+                  <div>{{notSuitableCandidate.FirstName}}-{{notSuitableCandidate.LastName}}</div>
+                  <div>
+                    <i id="font-awesome-icon-float-right" class="fa fa-times" aria-hidden="true"></i>
+                    <i id="font-awesome-icon-float-right" class="fa fa-eye" aria-hidden="true"> </i>
+                  </div>
                   <div></div>
                 </div>
               </div>
             </div>
-            <div><a class="w-button" href="#">Mark a candidate as not suitable</a>
+            <div><a id="mark-candidate-not-suitable-button" class="w-button" href="#">Mark a Candidate as Not Suitable</a>
             </div>
           </div>
         </div>
