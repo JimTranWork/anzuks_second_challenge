@@ -35,6 +35,7 @@
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
   <!-- End of style reference -->
   <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
@@ -66,82 +67,102 @@
     <div class="row-2 w-row">
       <div class="w-col w-col-3">
         <div class="role-info-container-div">
-          <div>
-            <div>Role Info</div>
+          <div class="details-title-div">
+            <div class="details-text-config">Role Info</div>
           </div>
-          <div class="row w-row">
-            <div class="column w-col w-col-6"></div>
-            <div class="w-col w-col-6"></div>
+          <div class="row w-row" id="asdasd123123">
+            <table style="width: 100%;">
+              <tr>
+                <td class="left-column"> Status </td>
+                <td class="right-column"> {{details.StatusAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Start Date </td>
+                <td class="right-column"> {{details.StartDate}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> End Date </td>
+                <td class="right-column"> {{details.EndDate}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Grades </td>
+                <td class="right-column"> {{gradesText}} </td>
+              </tr>
+            </table>
           </div>
         </div>
         <div class="details-container-div">
           <div class="details-title-div">
-            <div>Details</div>
+            <div class="details-text-config">Details</div>
           </div>
-          <div class="w-row" id="margin-table">
-            <table>
-							<tr>
-								<td class="left-column"> Main Contact </td>
-									<td class="right-column"> {{details.MainContactAsText.split(' ')[0]}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Category </td>
-								<td class="right-column"> {{details.CategoryAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Sub Category </td>
-								<td class="right-column"> {{details.SubCategoryAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Work Type </td>
-								<td class="right-column"> {{details.WorkTypeAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Lead Generator </td>
-								<td class="right-column"> {{details.LeadAdminUserAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Recruiter </td>
-								<td class="right-column"> {{details.RecruiterAdminUserAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Job Source </td>
-								<td class="right-column"> {{details.JobSourceAsText}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Priority </td>
-								<td class="right-column"> {{details.Priority}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Rating </td>
-								<td class="right-column"> {{details.Rating}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Reference No </td>
-								<td class="right-column"> {{details.Reference}} </td>
-							</tr>
-							<tr>
-								<td class="left-column"> Confirmed Salary </td>
-								<td class="right-column"> {{details.SalaryConfirmed}} </td>
-							</tr>
-						</table>
+          <div class="w-row" id="asdasd123123">
+            <table style="width: 100%;">
+              <tr>
+                <td class="left-column"> Main Contact </td>
+                <td class="right-column"> {{details.MainContactAsText.split(' ')[0]}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Category </td>
+                <td class="right-column"> {{details.CategoryAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Sub Category </td>
+                <td class="right-column"> {{details.SubCategoryAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Work Type </td>
+                <td class="right-column"> {{details.WorkTypeAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Lead Generator </td>
+                <td class="right-column"> {{details.LeadAdminUserAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Recruiter </td>
+                <td class="right-column"> {{details.RecruiterAdminUserAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Job Source </td>
+                <td class="right-column"> {{details.JobSourceAsText}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Priority </td>
+                <td class="right-column"> {{details.Priority}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Rating </td>
+                <td class="right-column"> {{details.Rating}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Reference No </td>
+                <td class="right-column"> {{details.Reference}} </td>
+              </tr>
+              <tr>
+                <td class="left-column"> Confirmed Salary </td>
+                <td class="right-column"> {{details.SalaryConfirmed}} </td>
+              </tr>
+            </table>
           </div>
         </div>
         <div class="associate-job-post-container-div">
-          <div>
-            <div>Associate Job Posts</div>
+          <div class="details-title-div">
+            <div class="details-text-config">Associate Job Posts
+              <div class="inactive-checkbox-text">
+                <input type="checkbox" name="Inactive" value="Inactive"> Show inactive (0) </input>
+              </div>
+            </div>
           </div>
           <div>
-            <div>No records found</div>
+            <div class="associate-job-post-result-div">No records found</div>
           </div>
         </div>
       </div>
       <div class="w-col w-col-3">
-        <div class="description-container-div">
-          <div>
-            <div>Description</div>
+        <div class="details-container-div">
+          <div class="details-title-div">
+            <div class="details-text-config">Description</div>
           </div>
-          <div>
+          <div class="associate-job-post-result-div">
             <p>This is a test.</p>
           </div>
         </div>
@@ -149,7 +170,7 @@
       <div class="w-col w-col-3">
         <div class="suitable-candidate-container-div">
           <div class="suitable-candidate-div w-clearfix"><a style="text-decoration: none;" class="suitable-candidate-collapse-button w-button" ng-model="collapseSuitableCandidate" ng-init="collapseSuitableCandidate=true" ng-click="collapseSuitableCandidateEvent()" href="#">-</a>
-            <div class="suitable-candidate-text">Suggested Candidates (4)</div>
+            <div class="suitable-candidate-text">Suggested Candidates ({{suggestedCandidates.length}})</div>
           </div>
           <div ng-show="collapseSuitableCandidate">
             <div>
@@ -177,7 +198,7 @@
         </div>
         <div class="not-suitable-candidate-container-div">
           <div class="not-suitable-candidate-div w-clearfix"><a style="text-decoration: none;" class="not-suitable-candidate-collapsible-button w-button" ng-model="collapseNotSuitableCandidate" ng-init="collapseNotSuitableCandidate=true" ng-click="collapseNotSuitableCandidateEvent()" href="#">-</a>
-            <div class="not-suitable-candidate-text">Not Suitable (1)</div>
+            <div class="not-suitable-candidate-text">Not Suitable ({{notSuitableCandidates.length}})</div>
           </div>
           <div ng-show="collapseNotSuitableCandidate">
             <div>
@@ -185,7 +206,7 @@
                 <div class="w-col w-col-3"><img src="http://i.dailymail.co.uk/i/pix/2015/03/30/04/271843AB00000578-0-image-a-86_1427687469357.jpg">
                 </div>
                 <div class="w-col w-col-9">
-                  <div>{{notSuitableCandidate.FirstName}}-{{notSuitableCandidate.LastName}}</div>
+                  <div><span class="suggested-candidate-name">{{notSuitableCandidate.FirstName}}-{{notSuitableCandidate.LastName}}</span></div>
                   <div>
                     <i id="font-awesome-icon-float-right" class="fa fa-times" aria-hidden="true"></i>
                     <i id="font-awesome-icon-float-right" class="fa fa-eye" aria-hidden="true"> </i>
@@ -202,31 +223,54 @@
       <div class="w-col w-col-3">
         <div class="floated-candidate-container-div">
           <div class="floated-candidate-div w-clearfix"><a class="floated-candidate-collapsible-button w-button" href="#">-</a>
-            <div class="floated-candidate-text">Floated Candidates (4)</div>
+            <div class="floated-candidate-text">Floated Candidates ({{floatedCandidates.length}})</div>
           </div>
           <div>
-            <div class="w-row">
-              <div class="w-col w-col-3"><img src="https://d3e54v103j8qbb.cloudfront.net/img/image-placeholder.svg">
+            <div class="w-row" ng-repeat="floatedCandidate in floatedCandidates">
+              <div class="w-col w-col-3"><img src="https://s-media-cache-ak0.pinimg.com/736x/d8/a7/28/d8a728e220065b9068214c5c3ea449a6.jpg">
               </div>
               <div class="w-col w-col-9">
-                <div></div>
-                <div></div>
+                <div><span class="suggested-candidate-name">{{floatedCandidate.FirstName}} {{floatedCandidate.LastName}}</span></div>
+                <div>
+                  <i id="font-awesome-icon-float-right" class="fa fa-times" aria-hidden="true"></i>
+                  <i id="font-awesome-icon-float-right" class="fa fa-frown-o" aria-hidden="true"></i>
+                  <i id="font-awesome-icon-float-right" class="fa fa-check" aria-hidden="true"></i>
+                  <i id="font-awesome-icon-float-right" class="fa fa-eye" aria-hidden="true"> </i>
+                </div>
               </div>
             </div>
+          </div>
+          <div>
+            <a id="mark-candidate-not-suitable-button" class="w-button" href="#">Float a Candidate</a>
           </div>
         </div>
         <div class="comment-container-div">
-          <div>
-            <div class="text-block">Comments</div>
+          <div class="details-title-div">
+            <div class="details-text-config">Comments</div>
           </div>
           <div>
             <div>
-              <p class="paragraph">Write that comment here....</p>
+              <textarea class="comment-text-area" rows="5" style="width: 95%;">
+              </textarea>
             </div>
-            <div><a class="save-comment-button w-button" href="#">Save Comment</a>
+            <div><a id="mark-candidate-not-suitable-button" class="w-button" href="#">Save Comment</a>
             </div>
           </div>
-          <div></div>
+          <div>
+            <div class="container" ng-repeat="comment in comments">
+                <div class="left-content">
+                  <p>
+                    <div>Left Content 01</div>
+                    <div>Left Content 01</div>
+                  </p>
+                </div>
+                <div class="right-content">
+                  <p>
+                    <div>Right Content 01</div>
+                  </p>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

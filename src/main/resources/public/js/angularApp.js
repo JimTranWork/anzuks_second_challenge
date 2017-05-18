@@ -7,7 +7,8 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                             $scope.floatedCandidates = [];
                                             $scope.notSuitableCandidates = [];
                                             $scope.grades = [];
-                                            $scope.associatedJobPosts = [];
+                                            $scope.gradesText = '';
+                                            $scope.associatedJobPos$ts = [];
                                             $scope.successfulCandidate = [];
                                             $scope.errors = [];
                                             $scope.details = [];
@@ -34,6 +35,17 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                                 $scope.floatedCandidates = response.data.ReturnObject.FloatedCandidates;
                                                 $scope.notSuitableCandidates = response.data.ReturnObject.NotSuitableCandidates;
                                                 $scope.grades = response.data.ReturnObject.Grades;
+
+                                                var gradesTextCommaControl = true;
+                                                for (i = 0; i < $scope.grades.length; i++) {
+                                                  if (gradesTextCommaControl) {
+                                                    $scope.gradesText += $scope.grades[i].Title;
+                                                    gradesTextCommaControl = false;
+                                                  } else {
+                                                    $scope.gradesText += ', ' + $scope.grades[i].Title;
+                                                  }
+                                                }
+
                                                 $scope.associatedJobPosts = response.data.ReturnObject.AssociatedJobPosts;
                                                 $scope.successfulCandidate = response.data.ReturnObject.SuccessfulCandidate;
                                                 $scope.details = response.data.ReturnObject;
@@ -44,6 +56,8 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                                 console.log($scope.notSuitableCandidates);
                                                 console.log('grades');
                                                 console.log($scope.grades);
+                                                console.log('gradesText');
+                                                console.log($scope.gradesText);
                                                 console.log('associatedJobPosts');
                                                 console.log($scope.associatedJobPosts);
                                                 console.log('successfulCandidate');

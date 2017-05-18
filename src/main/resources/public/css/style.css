@@ -1,0 +1,34 @@
+.container {
+	background:#FFF;
+	width:80%;
+	margin:0 auto;
+	overflow:auto;
+}
+.right-content, .left-content {
+	float:left;
+	display:block;
+	width:40%;
+}
+.left-content {
+	border-right:5px solid #666;
+	text-align:right;
+}
+.left-content p {
+	margin:80px 0 0;
+}
+.right-content p {
+	margin:80px 0 0;
+}
+.container p {
+-webkit-transition: all 0.7s ease-in-out;
+-moz-transition: all 0.7 ease-in-out;
+-ms-transition: all 0.7s ease-in-out;
+-o-transition: all 0.7s ease-in-out;
+transition: all 0.7s ease-in-out;
+}
+.left-content .more-padding {
+  padding-right:100px;
+}
+.right-content .more-padding {
+  padding-left:100px;
+}

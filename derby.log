@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Thu May 18 10:07:19 AEST 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015c-18e1-5391-00000c4c8488 
-on database directory memory:D:\Data\Projects\anzuks_second_challenge\testdb with class loader java.net.URLClassLoader@761e040d 
+Thu May 18 12:21:19 AEST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015c-195c-0233-00000ccc3e88 
+on database directory memory:D:\Data\Projects\anzuks_second_challenge\testdb with class loader java.net.URLClassLoader@cee211f 
 Loaded from file:/C:/Users/Spit%20Ice/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_131-b11
