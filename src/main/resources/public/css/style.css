@@ -1,16 +1,17 @@
 .container {
-	background:#FFF;
-	width:100%;
-	overflow:auto;
+  background: #FFF;
+  width: 100%;
+  overflow: auto;
 }
+
 .right-content, .left-content, .middle-content {
-	float:left;
+  float: left;
 }
 
 .middle-content {
-    width: 2%;
-    background-color: #777;
-    height: 80px;
+  width: 2%;
+  background-color: #777;
+  height: 80px;
 }
 
 #middle-content-icon {
@@ -19,37 +20,40 @@
   font-size: 20px;
   margin-right: 4px;
   padding-right: 10px;
-  background: white;
-
+  background: transparent;
 }
 
 .right-content {
-  width:58%;
+  width: 58%;
 }
 
 .left-content {
-	text-align:left;
-  width:40%;
+  text-align: left;
+  width: 40%;
 }
 
 .left-content p {
-	margin-top:10px;
+  margin-top: 10px;
 }
+
 .right-content p {
-	margin-top:10px;
+  margin-top: 10px;
 }
+
 .container p {
--webkit-transition: all 0.7s ease-in-out;
--moz-transition: all 0.7 ease-in-out;
--ms-transition: all 0.7s ease-in-out;
--o-transition: all 0.7s ease-in-out;
-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7 ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
+
 .left-content .more-padding {
-  padding-right:200px;
+  padding-right: 200px;
 }
+
 .right-content .more-padding {
-  padding-left:200px;
+  padding-left: 200px;
 }
 
 #left-content-time {
@@ -57,7 +61,7 @@ transition: all 0.7s ease-in-out;
 }
 
 #left-content-owner {
-    font-size: 11px;
+  font-size: 11px;
 }
 
 #right-content-item {

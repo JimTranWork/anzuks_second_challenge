@@ -222,7 +222,7 @@
       </div>
       <div class="w-col w-col-3">
         <div class="floated-candidate-container-div">
-          <div class="floated-candidate-div w-clearfix"><a style="text-decoration:none;" class="floated-candidate-collapsible-button w-button"  ng-model="collapseFloatedCandidate" ng-init="collapseFloatedCandidate=true" ng-click="collapseFloatedCandidateEvent()" href="#">-</a>
+          <div class="floated-candidate-div w-clearfix"><a style="text-decoration:none;" class="floated-candidate-collapsible-button w-button" ng-model="collapseFloatedCandidate" ng-init="collapseFloatedCandidate=true" ng-click="collapseFloatedCandidateEvent()" href="#">-</a>
             <div class="floated-candidate-text">Floated Candidates ({{floatedCandidates.length}})</div>
           </div>
           <div ng-show="collapseFloatedCandidate">
@@ -258,20 +258,20 @@
           </div>
           <div>
             <div class="container" ng-repeat="(key, comment) in comments">
-                <div class="left-content">
-                  <p>
-                    <div id="left-content-time">{{comment.dateDiffValue | date:'mm'}} minutes ago</div>
-                    <div id="left-content-owner">{{comment.AddedBy.split('\\')[1]}}</div>
-                  </p>
-                </div>
-								<div class="middle-content">
-									<i id="middle-content-icon" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-								</div>
-                <div class="right-content">
-                  <p>
-                    <div id="right-content-item" ng-bind-html="comment.CommentText | rawHtml"></div>
-                  </p>
-                </div>
+              <div class="left-content">
+                <p>
+                  <div id="left-content-time">{{comment.dateDiffValue | date:'mm'}} minutes ago</div>
+                  <div id="left-content-owner">{{comment.AddedBy.split('\\')[1]}}</div>
+                </p>
+              </div>
+              <div class="middle-content">
+                <i id="middle-content-icon" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              </div>
+              <div class="right-content">
+                <p>
+                  <div id="right-content-item" ng-bind-html="comment.CommentText | rawHtml"></div>
+                </p>
+              </div>
             </div>
           </div>
         </div>
