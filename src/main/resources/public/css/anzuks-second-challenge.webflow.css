@@ -1,0 +1,183 @@
+.body {
+  background-color: #eee;
+}
+
+.main-job-title {
+  color: #696256;
+}
+
+.sub-job-title {
+  color: #c6c6c6;
+}
+
+.job-campus-location {
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  color: #4b97cc;
+}
+
+.suitable-candidate-div {
+  background-color: #55a1ed;
+}
+
+.suitable-candidate-collapse-button {
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+  padding-right: 9px;
+  padding-left: 7px;
+  float: left;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #4d9ded;
+  line-height: 1px;
+}
+
+.suitable-candidate-text {
+  margin-top: 7px;
+  margin-left: 7px;
+  float: left;
+  color: #fff;
+}
+
+.not-suitable-candidate-div {
+  background-color: #cc3a3b;
+}
+
+.not-suitable-candidate-collapsible-button {
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+  padding-right: 7px;
+  padding-left: 7px;
+  float: left;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #cc3a3b;
+  line-height: 1px;
+}
+
+.not-suitable-candidate-text {
+  margin-top: 7px;
+  margin-left: 7px;
+  float: left;
+  color: #fff;
+}
+
+.floated-candidate-div {
+  background-color: #60a55a;
+}
+
+.floated-candidate-collapsible-button {
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+  padding-right: 9px;
+  padding-left: 7px;
+  float: left;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #60a55a;
+  line-height: 1px;
+}
+
+.floated-candidate-text {
+  margin-top: 7px;
+  margin-left: 7px;
+  color: #fff;
+}
+
+.text-block {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 7px;
+}
+
+.paragraph {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 7px;
+}
+
+.suitable-candidate-refresh-button {
+  float: left;
+}
+
+.save-comment-button {
+  background-color: transparent;
+  color: #333;
+}
+
+.suitable-candidate-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.not-suitable-candidate-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.floated-candidate-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: #fff;
+}
+
+.comment-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.role-info-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.details-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.associate-job-post-container-div {
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.description-container-div {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+  background-color: #fff;
+}
+
+.row {
+  background-color: #fff;
+}
+
+.column {
+  background-color: #fff;
+}
+
+.row-2 {
+  border-right: 1px solid #e2dfef;
+  border-bottom: 1px solid #e2dfef;
+}
