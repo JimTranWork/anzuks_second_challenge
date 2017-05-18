@@ -3,16 +3,30 @@
 	width:100%;
 	overflow:auto;
 }
-.right-content, .left-content {
+.right-content, .left-content, .middle-content {
 	float:left;
 }
 
+.middle-content {
+    width: 2%;
+    background-color: #777;
+    height: 80px;
+}
+
+#middle-content-icon {
+  z-index: 100;
+  position: relative;
+  font-size: 20px;
+  margin-right: 4px;
+  padding-right: 10px;
+  background: white;
+}
+
 .right-content {
-  width:60%;
+  width:58%;
 }
 
 .left-content {
-	border-right:5px solid #666;
 	text-align:left;
   width:40%;
 }
