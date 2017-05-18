@@ -1,5 +1,11 @@
 var angularApp = angular.module('angularApp', []);
 
+angularApp.filter('rawHtml', ['$sce', function($sce){
+  return function(val) {
+    return $sce.trustAsHtml(val);
+  };
+}]);
+
 angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                           function($scope, $http, $window) {
 
@@ -13,6 +19,8 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                             $scope.errors = [];
                                             $scope.details = [];
                                             $scope.comments = [];
+                                            $scope.currentDate = new Date();
+                                            $scope.datediffarray = [];
 
                                             $scope.getSuggestedCandidates = function() {
                                               $http({
@@ -75,6 +83,17 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
                                                 url : 'http://interviewtestjson.azurewebsites.net/api/Comments'
                                               }).then(function successCallback(response) {
                                                 $scope.comments = response.data.Comments;
+
+                                                for (i = 0; i < $scope.comments.length; i++) {
+                                                  var actionDate = $scope.comments[i].DateCreated.substring(6, 19);
+                                                  var calDateDiff = new Date() - actionDate;
+                                                  var dateDiff = { "dateDiffValue" : calDateDiff };
+                                                  $scope.datediffarray.push(dateDiff);
+                                                }
+
+                                                $scope.comments = angular.merge({}, $scope.comments, $scope.datediffarray);
+
+                                                console.log($scope.datediffarray);
                                                 console.log('getComments call is completed');
                                                 console.log($scope.comments);
                                               }, function errorCallback(response) {
@@ -106,6 +125,14 @@ angularApp.controller('mainController', [ '$scope', '$http', '$window',
       $scope.collapseNotSuitableCandidate = false;
     } else {
       $scope.collapseNotSuitableCandidate = true;
+    }
+  }
+
+  $scope.collapseFloatedCandidateEvent = function() {
+    if ($scope.collapseFloatedCandidate) {
+      $scope.collapseFloatedCandidate = false;
+    } else {
+      $scope.collapseFloatedCandidate = true;
     }
   }
 

@@ -222,10 +222,10 @@
       </div>
       <div class="w-col w-col-3">
         <div class="floated-candidate-container-div">
-          <div class="floated-candidate-div w-clearfix"><a class="floated-candidate-collapsible-button w-button" href="#">-</a>
+          <div class="floated-candidate-div w-clearfix"><a style="text-decoration:none;" class="floated-candidate-collapsible-button w-button"  ng-model="collapseFloatedCandidate" ng-init="collapseFloatedCandidate=true" ng-click="collapseFloatedCandidateEvent()" href="#">-</a>
             <div class="floated-candidate-text">Floated Candidates ({{floatedCandidates.length}})</div>
           </div>
-          <div>
+          <div ng-show="collapseFloatedCandidate">
             <div class="w-row" ng-repeat="floatedCandidate in floatedCandidates">
               <div class="w-col w-col-3"><img src="https://s-media-cache-ak0.pinimg.com/736x/d8/a7/28/d8a728e220065b9068214c5c3ea449a6.jpg">
               </div>
@@ -257,16 +257,16 @@
             </div>
           </div>
           <div>
-            <div class="container" ng-repeat="comment in comments">
+            <div class="container" ng-repeat="(key, comment) in comments">
                 <div class="left-content">
                   <p>
-                    <div>Left Content 01</div>
-                    <div>Left Content 01</div>
+                    <div id="left-content-time">{{comment.dateDiffValue | date:'mm'}} minutes ago</div>
+                    <div id="left-content-owner">{{comment.AddedBy.split('\\')[1]}}</div>
                   </p>
                 </div>
                 <div class="right-content">
                   <p>
-                    <div>Right Content 01</div>
+                    <div id="right-content-item" ng-bind-html="comment.CommentText | rawHtml"></div>
                   </p>
                 </div>
             </div>
