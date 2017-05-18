@@ -5,8 +5,6 @@
 }
 .right-content, .left-content {
 	float:left;
-	display:block;
-
 }
 
 .right-content {
@@ -20,10 +18,10 @@
 }
 
 .left-content p {
-	margin-top:35px;
+	margin-top:10px;
 }
 .right-content p {
-	margin-top:35px;
+	margin-top:10px;
 }
 .container p {
 -webkit-transition: all 0.7s ease-in-out;
